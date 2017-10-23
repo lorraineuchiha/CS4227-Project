@@ -12,4 +12,18 @@ public class Rectangle extends Primitive {
         drawLine(x + width, y, x + width, y + height);
         drawLine(x, y + height, x + width, y + height);
     }
+
+    public Rectangle(){
+        //For testing only
+        x = 10;
+        y = 10;
+        width = 200;
+        height = 40;
+    }
+
+    @Override
+    public Primitive clone() {
+        //to be implemented
+        return this;
+    }
 }

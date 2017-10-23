@@ -1,9 +1,14 @@
 package ie.cs4227.project.primitives;
 
+import ie.cs4227.project.drawing.ConcreteDrawingProgramTest;
 import ie.cs4227.project.drawing.DrawingProgram;
 
 public abstract class Primitive {
     protected DrawingProgram dp;
+
+    Primitive(){
+        dp = new ConcreteDrawingProgramTest();
+    }
 
     public final void drawLine(int x1, int y1, int x2, int y2) {
         dp.drawLine(x1, y1, x2, y2);
@@ -15,5 +20,6 @@ public abstract class Primitive {
         dp.drawText(x, y, text);
     }
 
-    public void draw() { }
+    public abstract Primitive clone();
+    public abstract void draw();
 }

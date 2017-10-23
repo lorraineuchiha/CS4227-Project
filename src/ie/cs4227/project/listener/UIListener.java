@@ -1,4 +1,4 @@
-package ie.cs4227.project.ui.listener;
+package ie.cs4227.project.listener;
 
 public interface UIListener {
     // TODO: Decide
